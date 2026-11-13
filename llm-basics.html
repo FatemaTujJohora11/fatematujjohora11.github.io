@@ -1,0 +1,12 @@
+---
+layout: null
+title: LLM Basics for Beginners
+permalink: /llm-basics/
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM Basics for Beginners | Fatema Tuj Johora</title><meta name="description" content="A beginner-friendly series on how large language models work."><style>
+body{margin:0;background:#faf9f6;color:#182b3d;font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#245e80}header{background:#fff;border-bottom:1px solid #e4e7e6}nav{max-width:920px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}nav a{text-decoration:none}.wrap{max-width:920px;margin:auto;padding:65px 24px}h1{font-size:clamp(35px,5vw,56px);letter-spacing:-.04em;line-height:1.13}h2{font-size:22px}.lead{color:#526475;font-size:19px;max-width:740px}.entry{padding:22px 0;border-top:1px solid #e4e7e6}.entry h2{margin:0 0 5px}.entry p{margin:0;color:#526475}.pill{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:#245e80;font-weight:700}.note{background:white;border:1px solid #e4e7e6;padding:22px;border-radius:10px;margin:34px 0}footer{margin-top:40px;padding:24px;border-top:1px solid #e4e7e6;color:#526475;text-align:center;font-size:14px}
+</style></head><body><header><nav><strong><a href="/">Fatema Tuj Johora</a></strong><span><a href="/blog/">Blog</a> · <a href="/">Home</a></span></nav></header><main class="wrap"><p class="pill">Learning Series</p><h1>LLM Basics for Beginners</h1><p class="lead">An approachable path from next-token prediction to tokens, embeddings, attention, transformers, and model weights. Explore each concept in simple language, with examples.</p>
+<div class="note"><strong>Originally shared on LinkedIn</strong><p>This website series includes newly adapted explanatory articles based on the topics of my LinkedIn learning series, not verbatim copies of the original posts. <a href="https://www.linkedin.com/pulse/llm-basics-beginners-my-learning-series-fatema-tuj-johora-b5lhc">View the LinkedIn series overview →</a></p></div>
+{% assign series_posts = site.posts | where: "series", "LLM Basics for Beginners" | sort: "order" %}
+{% for post in series_posts %}<article class="entry"><h2><a href="{{ post.url | relative_url }}">{{ post.order }}. {{ post.title | escape }}</a></h2><p>{{ post.excerpt | strip_html | truncatewords: 32 }}</p></article>{% endfor %}
+</main><footer>© {{ site.time | date:"%Y" }} Fatema Tuj Johora</footer></body></html>
