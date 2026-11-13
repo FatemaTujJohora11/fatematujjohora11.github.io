@@ -1,0 +1,7 @@
+title: "Fatema Tuj Johora"
+description: "AI education, applied machine learning, research and writing"
+url: "https://fatematujjohora11.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+timezone: America/St_Johns
