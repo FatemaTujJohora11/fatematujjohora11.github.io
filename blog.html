@@ -1,0 +1,27 @@
+---
+layout: null
+title: "Blog & Learning Notes"
+permalink: /blog/
+---
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog & Learning Notes | Fatema Tuj Johora</title>
+<meta name="description" content="Articles about AI, machine learning, research, technical education and learning.">
+<style>
+body{margin:0;background:#faf9f6;color:#182b3d;font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:#245e80}header{background:white;border-bottom:1px solid #e4e7e6}nav{max-width:980px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none}.wrap{max-width:980px;margin:auto;padding:60px 24px 100px}h1{font-size:clamp(36px,5vw,55px);letter-spacing:-.035em;line-height:1.15}
+.lead{max-width:700px;color:#526475;font-size:18px}.post{background:white;border:1px solid #e4e7e6;border-radius:10px;padding:25px;margin:18px 0;max-width:780px}
+.post h2{margin:5px 0;font-size:24px}.post h2 a{text-decoration:none}.post p{margin:8px 0;color:#526475}
+.meta{font-size:13px;color:#526475}
+</style></head><body><header><nav><strong><a href="/">Fatema Tuj Johora</a></strong><a href="/">← Home</a></nav></header>
+<main class="wrap"><p style="color:#245e80;text-transform:uppercase;letter-spacing:.13em;font-size:13px;font-weight:700">Ideas · Research · Learning</p>
+<h1>Blog & Learning Notes</h1><p class="lead">Thoughts and beginner-friendly explanations on AI, large language models, machine learning, research, and my ongoing learning journey — in English and Bangla.</p>
+{% for post in site.posts %}
+<article class="post"><p class="meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.category %} · {{ post.category }}{% endif %}</p>
+<h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+<p>{{ post.excerpt | strip_html | truncatewords: 32 }}</p><a href="{{ post.url | relative_url }}">Read article →</a></article>
+{% else %}
+<p>No posts yet. Check back soon.</p>
+{% endfor %}
+</main></body></html>
