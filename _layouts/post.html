@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 150 | escape }}">
+<style>
+body{margin:0;background:#faf9f6;color:#182b3d;font:17px/1.8 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:#245e80}header,footer{background:white;border-bottom:1px solid #e4e7e6;padding:20px max(24px,calc((100vw - 780px)/2))}
+nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between}nav a{text-decoration:none}
+main{max-width:780px;margin:65px auto 90px;padding:0 24px}h1{font-size:clamp(32px,5vw,48px);line-height:1.16;letter-spacing:-.025em}
+article img{max-width:100%;height:auto}article pre{overflow:auto;background:#edf1f3;padding:16px;border-radius:8px}
+article blockquote{border-left:3px solid #245e80;margin-left:0;padding-left:20px;color:#526475}
+.meta{color:#526475;font-size:14px}footer{border-top:1px solid #e4e7e6;border-bottom:0;color:#526475;font-size:14px}
+</style></head><body>
+<header><nav><strong><a href="/">Fatema Tuj Johora</a></strong><a href="/blog/">← All articles</a></nav></header>
+<main><p class="meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.category %} · {{ page.category }}{% endif %}</p>
+<h1>{{ page.title | escape }}</h1>
+<article>{{ content }}</article><p style="margin-top:55px"><a href="/blog/">← Back to blog</a></p></main>
+<footer>© {{ site.time | date: "%Y" }} Fatema Tuj Johora</footer></body></html>
